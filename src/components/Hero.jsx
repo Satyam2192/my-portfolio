@@ -60,7 +60,7 @@ const Hero = () => {
         <img
           src="https://r4.wallpaperflare.com/wallpaper/751/849/165/space-galaxy-universe-space-art-wallpaper-a930f8fd615aadabe667486f9001b64d.jpg"
           alt="background"
-          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center`}
+          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center flex overflow-hidden`}
         />
       </Plx>
       <Plx
@@ -89,7 +89,7 @@ const Hero = () => {
         <img
           src="https://i.postimg.cc/WpXqgK57/bg-3.png"
           alt="foreground"
-          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center`}
+          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center overflow-hidden`}
         />
       </Plx>
 
@@ -114,26 +114,17 @@ const Hero = () => {
           width: "100%",
         }}
       >
-        <div
-          className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex justify-center items-start gap-5`}
-        >
-          <div className="flex flex-col justify-center items-center mt-5">
-            <div className="w-5 h-5 bg-[#5efff7]" />
-            <div className="w-1 sm:h-80 h-40 violet-gradient" />
-          </div>
-
-          <div>
-            <h1 className={`${styles.heroHeadText} text-white text-[20px]`}>
-              Hi, I'm <span className="text-[#5efff7]">Satyam kumar</span>
-            </h1>
-
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I develop 3D visuals, user{" "}
-              <br className="sm:block hidden text-[20px]" />
-              interfaces and web applications
-            </p>
-          </div>
+      <div className="flex flex-col justify-center items-center h-screen">
+      <div className="text-center">
+        <div className="text-white text-3xl sm:text-5xl font-bold">
+          <h1>Hi, I'm</h1>
+          <h1 className="ml-3 text-[#5efff7]">Satyam kumar</h1>
         </div>
+        <p className="mt-4 text-white-100 w-[250px] text-lg sm:text-xl sm:w-[500px]">
+          I develop 3D visuals, user interfaces and web applications
+        </p>
+      </div>
+    </div>
       </Plx>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
