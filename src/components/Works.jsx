@@ -67,7 +67,16 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-white text-[14px]">{description}</p>
+          <ol className="mt-5 list-none ml-5 space-y-2">
+            {description.map((description, index) => (
+              <li
+                key={`description-${index}`}
+                className="text-white text-14px pl-1 tracking-wider"
+              >
+                {description}
+              </li>
+            ))}
+          </ol>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -111,7 +120,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <section className="h-100vh  snap-center">
+    <section className="h-100vh  snap-center ">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] p-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl relative"
@@ -128,7 +137,7 @@ const Works = () => {
         ></motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap justify-center gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

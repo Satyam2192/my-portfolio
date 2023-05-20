@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
 import {
-  
-  
   javascript,
   html,
   css,
@@ -12,6 +10,7 @@ import {
   git,
   threejs,
 } from "../assets";
+import { showbooker } from "../assets";
 
 export const navLinks = [
   {
@@ -31,13 +30,12 @@ export const navLinks = [
 const services = [
   {
     title: "",
-    
   },
   {
     title: "React Developer",
     icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
   },
- 
+
   // {
   //   title: "Content Creator",
   //   icon: creator,
@@ -66,7 +64,7 @@ const technologies = [
     icon: reactjs,
   },
   // {
-  //   name: "Redux Toolkit",
+  //   name: "Express js",
   //   icon: redux,
   // },
   {
@@ -110,45 +108,45 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-//   {
-//     title: "React Native Developer",
-//     company_name: "Tesla",
-//     icon: tesla,
-//     iconBg: "#E6DEDD",
-//     date: "Jan 2021 - Feb 2022",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-//   {
-//     title: "Web Developer",
-//     company_name: "Shopify",
-//     icon: shopify,
-//     iconBg: "#383E56",
-//     date: "Jan 2022 - Jan 2023",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
-//   {
-//     title: "Full stack Developer",
-//     company_name: "Meta",
-//     icon: meta,
-//     iconBg: "#E6DEDD",
-//     date: "Jan 2023 - Present",
-//     points: [
-//       "Developing and maintaining web applications using React.js and other related technologies.",
-//       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-//       "Implementing responsive design and ensuring cross-browser compatibility.",
-//       "Participating in code reviews and providing constructive feedback to other developers.",
-//     ],
-//   },
+  //   {
+  //     title: "React Native Developer",
+  //     company_name: "Tesla",
+  //     icon: tesla,
+  //     iconBg: "#E6DEDD",
+  //     date: "Jan 2021 - Feb 2022",
+  //     points: [
+  //       "Developing and maintaining web applications using React.js and other related technologies.",
+  //       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //       "Implementing responsive design and ensuring cross-browser compatibility.",
+  //       "Participating in code reviews and providing constructive feedback to other developers.",
+  //     ],
+  //   },
+  //   {
+  //     title: "Web Developer",
+  //     company_name: "Shopify",
+  //     icon: shopify,
+  //     iconBg: "#383E56",
+  //     date: "Jan 2022 - Jan 2023",
+  //     points: [
+  //       "Developing and maintaining web applications using React.js and other related technologies.",
+  //       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //       "Implementing responsive design and ensuring cross-browser compatibility.",
+  //       "Participating in code reviews and providing constructive feedback to other developers.",
+  //     ],
+  //   },
+  //   {
+  //     title: "Full stack Developer",
+  //     company_name: "Meta",
+  //     icon: meta,
+  //     iconBg: "#E6DEDD",
+  //     date: "Jan 2023 - Present",
+  //     points: [
+  //       "Developing and maintaining web applications using React.js and other related technologies.",
+  //       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //       "Implementing responsive design and ensuring cross-browser compatibility.",
+  //       "Participating in code reviews and providing constructive feedback to other developers.",
+  //     ],
+  //   },
 ];
 
 const testimonials = [
@@ -180,9 +178,49 @@ const testimonials = [
 
 const projects = [
   {
+    name: "ShowBooker",
+    description:[
+      "About: It is an online TV show booking website",
+      "Features: (Work in Progress)",
+      "1. Search various shows and like website",
+      "2. Get all shows listed and descriptions of shows with trailers",
+      "3. Book your favorite show",
+    ],
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express js",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: showbooker,
+    source_code_link1: "https://showbooker.netlify.app/",
+    source_code_link2: "https://github.com/Satyam2192/movie-tickets-booking-",
+  },
+  {
     name: "Turu Lav",
-    description:
-      "It is a user-friendly front-end UI design of a dating website, incorporating beautiful animations to enhance the user experience and responsive UI designs",
+    description: [
+      "About: It is a dating website with a matching algorithm and chatting features",
+      "Features: (Work in Progress)",
+      "1. Registration functionality with the making of the profile section.",
+      "2. Features of matching algorithm and search profile.",
+      "3. 1-1 chatting feature for users",
+    ],
     tags: [
       {
         name: "react",
@@ -200,12 +238,17 @@ const projects = [
     image:
       "https://i.postimg.cc/SQ6hBjTK/Screenshot-from-2023-04-08-22-44-39.png",
     source_code_link1: "https://turuluv.netlify.app/",
-    source_code_link2: "https://github.com/Satyam2192/TuruLuv/tree/main/src",
+    source_code_link2: "https://github.com/Satyam2192/TuruLuv/",
   },
   {
     name: "Earth Savers",
-    description:
-      "It provides users with information about their carbon footprints. Implemented features such as scroll-up, login, signup, reset password, contact, comment, and more. Built with visually appealing and responsive UI designs, ensuring optimal user experience on various platforms such as desktop and mobile.",
+    description:[
+      "About: It provides users with information about their carbon footprints.",
+      "Features:",
+      "1. Realtime carbon footprint data.",
+      "2. Registration functionality and contact option.",
+      "3. Scroll-up functionality with responsive UI designs.",
+    ],
     tags: [
       {
         name: "react",
@@ -226,8 +269,13 @@ const projects = [
   },
   {
     name: "Food Booking",
-    description:
-      "It is a food booking website that integrates with a recipe API, allowing users to search and save their favorite recipes. The website features a user-friendly interface that allows users to easily search recipes and add or remove them from their favorites list.",
+    description:[
+      "About: It is a food booking website that integrates with a recipe API",
+      "Features: ",
+      "1. It has a user-friendly UI interface that allows users to easily search recipes",
+      "2. Search your favorate recipes",
+      "3. Add or remove recipes from favorites list.",
+    ],
     tags: [
       {
         name: "react",
@@ -243,10 +291,11 @@ const projects = [
       },
     ],
     image: "https://iili.io/HUPzBEu.png",
-    source_code_link1: "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
-    source_code_link2: "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
+    source_code_link1:
+      "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
+    source_code_link2:
+      "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
   },
-  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

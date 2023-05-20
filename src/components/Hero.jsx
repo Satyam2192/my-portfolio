@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Plx from "react-plx";
+import { useSpring, animated } from "react-spring";
 
 import { styles } from "../styles";
 import AnimatedCursor from "react-animated-cursor";
@@ -31,6 +32,12 @@ const Cursor = () => {
 };
 
 const Hero = () => {
+  const textAnimation = useSpring({
+    from: { transform: "translate3d(0,-50px,0)", opacity: 0 },
+    to: { transform: "translate3d(0,0,0)", opacity: 1 },
+    config: { tension: 300, friction: 10 },
+  });
+
   return (
     <section
       className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App`}
@@ -114,17 +121,19 @@ const Hero = () => {
           width: "100%",
         }}
       >
-      <div className="flex flex-col justify-center items-center h-screen">
-      <div className="text-center">
-        <div className="text-white text-3xl sm:text-5xl font-bold">
-          <h1>Hi, I'm</h1>
-          <h1 className="ml-3 text-[#5efff7]">Satyam kumar</h1>
-        </div>
-        <p className="mt-4 text-white-100 w-[250px] text-lg sm:text-xl sm:w-[500px]">
-          I develop 3D visuals, user interfaces and web applications
-        </p>
-      </div>
-    </div>
+        <animated.div style={textAnimation}>
+          <div className="flex flex-col justify-center items-center h-screen animate__animated animate__fadeInDown duration-1000 delay-500 transform rotateY-10">
+            <div className="text-center">
+              <div className="text-white text-3xl sm:text-5xl font-bold">
+                <h1>Hi, I'm</h1>
+                <h1 className="ml-3 text-[#5efff7]">Satyam kumar</h1>
+              </div>
+              <p className="mt-4 text-white-100 w-[250px] text-lg sm:text-xl sm:w-[500px]">
+                I develop 3D visuals, user interfaces and web applications
+              </p>
+            </div>
+          </div>
+        </animated.div>
       </Plx>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

@@ -12,6 +12,7 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
+import showbooker from "./Screenshot from 2023-05-19 07-56-07.png"
 
 
 export {
@@ -24,6 +25,7 @@ export {
   html,
   javascript,
   mongodb,
+  showbooker,
   nodejs,
   reactjs,
   tailwind,
