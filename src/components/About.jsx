@@ -26,7 +26,7 @@ const About = () => {
     <section className="h-100vh snap-center">
       <div>
         <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
+          variants={slideIn("left", "tween", 0.1, 0.7)}
           className="flex-[0.75] bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>INTRODUCTION</p>

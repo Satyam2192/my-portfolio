@@ -122,7 +122,7 @@ const Works = () => {
   return (
     <section className="h-100vh  snap-center ">
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn("right", "tween", 0.1, 0.7)}
         className="flex-[0.75] p-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl relative"
       >
         <div className="absolute top-0 left-0 w-full h-full  rounded-2xl opacity-50"></div>

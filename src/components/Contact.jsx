@@ -64,7 +64,7 @@ const Contact = () => {
     flex gap-10 overflow-hidden"
       >
         <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
+          variants={slideIn("left", "tween", 0.1, 0.7)}
           className="flex-[0.75] bg-gradient-to-r from-pink-500 to-purple-500 to-yellow-500 to-red-500 to-green-500 to-blue-500 opacity-50 transform rotate-90 p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>Get in touch with me</p>
