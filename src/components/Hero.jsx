@@ -38,6 +38,12 @@ const Hero = () => {
     config: { tension: 300, friction: 10 },
   });
 
+  const backgroundImage =
+    window.innerWidth > 768
+      ? "https://r4.wallpaperflare.com/wallpaper/751/849/165/space-galaxy-universe-space-art-wallpaper-a930f8fd615aadabe667486f9001b64d.jpg"
+      : "https://w0.peakpx.com/wallpaper/346/335/HD-wallpaper-triangle-planet-color-colorful-geoglyser-abstract-blue-cosmos-dream-earth-fluid-galaxy-orange-pink-psychedelic-purple-rainbow-holographic-solar-system-space-stars-texture-vaporwave.jpg";
+      
+
   return (
     <section
       className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App`}
@@ -65,7 +71,7 @@ const Hero = () => {
         }}
       >
         <img
-          src="https://r4.wallpaperflare.com/wallpaper/751/849/165/space-galaxy-universe-space-art-wallpaper-a930f8fd615aadabe667486f9001b64d.jpg"
+          src={`${backgroundImage}`}
           alt="background"
           className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center flex overflow-hidden`}
         />

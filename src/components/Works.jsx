@@ -20,8 +20,7 @@ const ProjectCard = ({
   source_code_link2,
 }) => {
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    <div
       className="bg-nonerounded-2xl overflow-hidden relative"
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-500 to-purple-500 to-blue-500 opacity-50 rounded-2xl"></div>
@@ -114,21 +113,20 @@ const ProjectCard = ({
           className="w-3 h-3 rounded-full bg-gradient-to-b from-green-500 to-blue-500 mt-1"
         />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <section className="h-100vh  snap-center ">
-      <motion.div
-        variants={slideIn("right", "tween", 0.1, 0.7)}
+      <div
         className="flex-[0.75] p-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl relative"
       >
         <div className="absolute top-0 left-0 w-full h-full  rounded-2xl opacity-50"></div>
         <p className={styles.sectionSubText}>My Works</p>
         <h3 className={styles.sectionHeadText}>Projects.</h3>
-      </motion.div>
+      </div>
 
       <div className="w-full flex">
         <motion.p
