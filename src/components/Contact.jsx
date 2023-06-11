@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import StationCanvas from "./canvas/Station";
+import { StarsCanvas } from "./canvas";
 
 // p8_Ed82x5hx2FCGnf
 // template_r8entax
@@ -58,7 +59,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-100vh snap-center">
+    <section className="relative z-0 h-100vh snap-center">
+      <StarsCanvas />
       <div
         className="xl:mt-12 xl:flex-row flex-col-reverse 
     flex gap-10 overflow-hidden"
@@ -73,7 +75,7 @@ const Contact = () => {
           <form
             // ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8 " 
+            className="mt-12 flex flex-col gap-8 "
           >
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Name</span>
@@ -125,7 +127,7 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
-          <StationCanvas loading="lazy"/>
+          <StationCanvas loading="lazy" />
         </motion.div>
       </div>
     </section>
@@ -134,4 +136,4 @@ const Contact = () => {
 
 // <StationCanvas />
 
-export default SectionWrapper(Contact, "");
+export default SectionWrapper(Contact, "contact");

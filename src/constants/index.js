@@ -19,7 +19,7 @@ export const navLinks = [
   },
   {
     id: "works",
-    title: "works",
+    title: "Works",
   },
   {
     id: "contact",
@@ -178,6 +178,41 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Real Time Task Manager",
+    description:[
+      "About: It is Task Manager Web App, where you can get your tasks done with the help of your comutility",
+      "Features: (Work in Progress)",
+      "1. Creating workspace, list of Task add add your profile picture or other info .",
+      "2. Add maembers to your workspace, colabrate with them and comment on any task",
+      "3. Get real time updates and notification",
+    ],
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express js",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: showbooker,
+    source_code_link1: "https://real-time-task-manager.netlify.app",
+    source_code_link2: "https://github.com/Satyam2192/Real-time-Task-Manager",
+  },
+  {
     name: "ShowBooker",
     description:[
       "About: It is an online TV show booking website",
@@ -227,11 +262,11 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "Js",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "cloud firestore",
         color: "pink-text-gradient",
       },
     ],

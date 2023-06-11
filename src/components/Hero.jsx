@@ -5,6 +5,7 @@ import { useSpring, animated } from "react-spring";
 import { styles } from "../styles";
 import AnimatedCursor from "react-animated-cursor";
 
+
 const Cursor = () => {
   return (
     <AnimatedCursor
@@ -42,11 +43,10 @@ const Hero = () => {
     window.innerWidth > 768
       ? "https://r4.wallpaperflare.com/wallpaper/751/849/165/space-galaxy-universe-space-art-wallpaper-a930f8fd615aadabe667486f9001b64d.jpg"
       : "https://w0.peakpx.com/wallpaper/346/335/HD-wallpaper-triangle-planet-color-colorful-geoglyser-abstract-blue-cosmos-dream-earth-fluid-galaxy-orange-pink-psychedelic-purple-rainbow-holographic-solar-system-space-stars-texture-vaporwave.jpg";
-      
 
   return (
     <section
-      className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App`}
+      className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App overflow-hidden`}
     >
       <Cursor />
       <Plx
@@ -202,7 +202,9 @@ const Hero = () => {
             />
           </div>
         </a>
+        
       </div>
+      
     </section>
   );
 };

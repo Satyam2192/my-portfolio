@@ -6,8 +6,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { slideIn } from "../utils/motion";
 import { StarsCanvas } from "./canvas";
-
-
+import Tech from "./Tech";
 
 const About = () => {
   const [cursorPos, setCursorPos] = useState({ x: 100, y: 100 });
@@ -155,7 +154,7 @@ const About = () => {
         </motion.div>
       </div>
       <div
-    className="cursor"
+        className="cursor"
         style={{
           left: `${cursorPos.x}px`,
           top: `${cursorPos.y}px`,
@@ -170,6 +169,8 @@ const About = () => {
           }}
         ></div>
       </div>
+      <Tech />
+
       <StarsCanvas />
     </section>
   );
