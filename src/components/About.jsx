@@ -169,7 +169,7 @@ const About = () => {
           }}
         ></div>
       </div>
-      <Tech />
+    
 
       <StarsCanvas />
     </section>
