@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import Plx from "react-plx";
 import { useSpring, animated } from "react-spring";
-
+import { bg1, bg12, bg3 } from "../assets/components/index";
 import { styles } from "../styles";
 import AnimatedCursor from "react-animated-cursor";
-
 
 const Cursor = () => {
   return (
@@ -41,9 +40,11 @@ const Hero = () => {
 
   const backgroundImage =
     window.innerWidth > 768
-      ? "https://r4.wallpaperflare.com/wallpaper/751/849/165/space-galaxy-universe-space-art-wallpaper-a930f8fd615aadabe667486f9001b64d.jpg"
-      : "https://w0.peakpx.com/wallpaper/346/335/HD-wallpaper-triangle-planet-color-colorful-geoglyser-abstract-blue-cosmos-dream-earth-fluid-galaxy-orange-pink-psychedelic-purple-rainbow-holographic-solar-system-space-stars-texture-vaporwave.jpg";
+      ? bg1
+      : bg12;
 
+  const backgroundImage3 =
+    window.innerWidth > 768 ? bg3 : bg3;
   return (
     <section
       className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App overflow-hidden`}
@@ -100,7 +101,7 @@ const Hero = () => {
         }}
       >
         <img
-          src="https://i.postimg.cc/WpXqgK57/bg-3.png"
+          src={`${backgroundImage3}`}
           alt="foreground"
           className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center overflow-hidden`}
         />
@@ -135,7 +136,7 @@ const Hero = () => {
                 <h1 className="ml-3 text-[#5efff7]">Satyam kumar</h1>
               </div>
               <p className="mt-4 text-white-100 w-[250px] text-lg sm:text-xl sm:w-[500px]">
-                I develop 3D visuals, user interfaces and web applications
+                I develop Full Stack web applications
               </p>
             </div>
           </div>
@@ -202,9 +203,7 @@ const Hero = () => {
             />
           </div>
         </a>
-        
       </div>
-      
     </section>
   );
 };

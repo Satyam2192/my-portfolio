@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import StationCanvas from "./canvas/Station";
-import { StarsCanvas } from "./canvas";
+
 
 // p8_Ed82x5hx2FCGnf
 // template_r8entax
@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <section className="relative z-0 h-100vh snap-center">
-      <StarsCanvas />
+  
       <div
         className="xl:mt-12 xl:flex-row flex-col-reverse 
     flex gap-10 overflow-hidden"

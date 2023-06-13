@@ -8,7 +8,6 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { slideIn } from "../utils/motion";
-import { StarsCanvas } from "./canvas";
 
 const ProjectCard = ({
   index,
@@ -140,7 +139,6 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-      <StarsCanvas />
     </section>
   );
 };

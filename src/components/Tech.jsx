@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { StarsCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { Canvas } from "@react-three/fiber";
@@ -44,7 +43,6 @@ const Tech = () => {
             <img src={technology.icon} />
           </div>
         ))}
-        <StarsCanvas />
       </div>
     </section>
   );

@@ -5,7 +5,6 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { slideIn } from "../utils/motion";
-import { StarsCanvas } from "./canvas";
 import Tech from "./Tech";
 
 const About = () => {
@@ -171,7 +170,6 @@ const About = () => {
       </div>
     
 
-      <StarsCanvas />
     </section>
   );
 };

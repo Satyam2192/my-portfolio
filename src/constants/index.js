@@ -10,7 +10,13 @@ import {
   git,
   threejs,
 } from "../assets";
-import { showbooker } from "../assets";
+import {
+  taskmanager,
+  showbooker,
+  turulav,
+  earthsavers,
+  foodbooker,
+} from "../assets/components/index";
 
 export const navLinks = [
   {
@@ -75,10 +81,10 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
   {
     name: "Three JS",
     icon: threejs,
@@ -179,12 +185,13 @@ const testimonials = [
 const projects = [
   {
     name: "Real Time Task Manager",
-    description:[
+    description: [
       "About: It is Task Manager Web App, where you can get your tasks done with the help of your comutility",
       "Features: (Work in Progress)",
-      "1. Creating workspace, list of Task add add your profile picture or other info .",
-      "2. Add maembers to your workspace, colabrate with them and comment on any task",
-      "3. Get real time updates and notification",
+      "1. Create your workspace, add a list of Tasks, and add your profile picture or other info.",
+      "2. Add members to your workspace, collaborate with them, and comment on any task",
+      "3. Get real-time updates and notifications with the dark mode feature",
+      "4. Authentication feature with URL protection",
     ],
     tags: [
       {
@@ -208,13 +215,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: showbooker,
+    image: taskmanager,
     source_code_link1: "https://real-time-task-manager.netlify.app",
     source_code_link2: "https://github.com/Satyam2192/Real-time-Task-Manager",
   },
   {
     name: "ShowBooker",
-    description:[
+    description: [
       "About: It is an online TV show booking website",
       "Features: (Work in Progress)",
       "1. Search various shows and like website",
@@ -271,13 +278,13 @@ const projects = [
       },
     ],
     image:
-      "https://i.postimg.cc/SQ6hBjTK/Screenshot-from-2023-04-08-22-44-39.png",
+      turulav,
     source_code_link1: "https://turuluv.netlify.app/",
     source_code_link2: "https://github.com/Satyam2192/TuruLuv/",
   },
   {
     name: "Earth Savers",
-    description:[
+    description: [
       "About: It provides users with information about their carbon footprints.",
       "Features:",
       "1. Realtime carbon footprint data.",
@@ -298,13 +305,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "https://iili.io/HUPnvyB.png",
+    image: earthsavers,
     source_code_link1: "https://skearthsavers.netlify.app/",
     source_code_link2: "https://github.com/Satyam2192/SkEarthSavers",
   },
   {
     name: "Food Booking",
-    description:[
+    description: [
       "About: It is a food booking website that integrates with a recipe API",
       "Features: ",
       "1. It has a user-friendly UI interface that allows users to easily search recipes",
@@ -325,7 +332,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "https://iili.io/HUPzBEu.png",
+    image: foodbooker,
     source_code_link1:
       "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
     source_code_link2:
