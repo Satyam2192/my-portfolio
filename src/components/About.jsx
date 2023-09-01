@@ -25,7 +25,7 @@ const About = () => {
       <div>
         <motion.div
           variants={slideIn("left", "tween", 0.1, 0.7)}
-          className="flex-[0.75] bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-2xl"
+          className="flex-[0.75] bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-2xl shadow-su"
         >
           <p className={styles.sectionSubText}>INTRODUCTION</p>
           <h3 className={styles.sectionHeadText}>Overview.</h3>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { OrbitControls, Stars } from "@react-three/drei";
 import { Suspense } from "react";
 
 const Tech = () => {
@@ -22,8 +22,8 @@ const Tech = () => {
           pointerEvents: "none",
         }}
       >
-        <div
-          className="absolute "
+        {/* <div
+          className="absolute"
           style={{
             width: "100px",
             height: "100px",
@@ -35,12 +35,16 @@ const Tech = () => {
             }px)`,
             pointerEvents: "none",
           }}
-        />
+        /> */}
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-10 relative">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
-            <img src={technology.icon} />
+            <img
+              className="shadow-su bgStyle"
+              
+              src={technology.icon}
+            />
           </div>
         ))}
       </div>

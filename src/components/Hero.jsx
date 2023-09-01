@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring";
 import { bg1, bg12, bg3 } from "../assets/components/index";
 import { styles } from "../styles";
 import AnimatedCursor from "react-animated-cursor";
+import { StarsCanvas } from "./canvas";
 
 const Cursor = () => {
   return (
@@ -49,7 +50,9 @@ const Hero = () => {
     <section
       className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App overflow-hidden`}
     >
+    
       <Cursor />
+      
       <Plx
         parallaxData={[
           {
@@ -71,11 +74,11 @@ const Hero = () => {
           width: "100%",
         }}
       >
-        <img
+        {/* <img
           src={`${backgroundImage}`}
           alt="background"
           className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center flex overflow-hidden`}
-        />
+        /> */}
       </Plx>
       <Plx
         parallaxData={[
@@ -128,6 +131,7 @@ const Hero = () => {
           width: "100%",
         }}
       >
+      
         <animated.div style={textAnimation}>
           <div className="flex flex-col justify-center items-center h-screen animate__animated animate__fadeInDown duration-1000 delay-500 transform rotateY-10">
             <div className="text-center">

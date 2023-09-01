@@ -1,86 +1,91 @@
-import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { useTransition, animated, config } from 'react-spring';
 
-import "react-vertical-timeline-component/style.min.css";
+const experiences = [
+  {
+    id: 1,
+    date: "2023 - Present",
+    title: "Web Development Lead",
+    company_name: "Tech Solutions Inc.",
+    icon: "/images/company-logo-1.png",
+    iconBg: "#F472B6",
+    points: [
+      "Led a team of developers in creating a cutting-edge web application.",
+      "Implemented new features and improved existing ones.",
+      "Worked closely with designers to create a seamless user experience.",
+    ],
+  },
+  {
+    id: 2,
+    date: "2022 - 2023",
+    title: "Frontend Developer",
+    company_name: "Software Co.",
+    icon: "/images/company-logo-2.png",
+    iconBg: "#60A5FA",
+    points: [
+      "Developed user interfaces for web applications.",
+      "Collaborated with backend developers to integrate frontend with server-side logic.",
+      "Worked on performance optimization and responsive design.",
+    ],
+  },
+  // Add more experiences as needed
+];
 
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
-import { slideIn } from "../utils/motion";
+const ExperienceCard = ({ item }) => {
+  const [show, setShow] = useState(false);
 
-const ExperienceCard = ({ experience }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
+  // const transitions = useTransition(show, null, {
+  //   from: { opacity: 0, transform: 'translate3d(0,-40px,0)' },
+  //   enter: { opacity: 1, transform: 'translate3d(0,0px,0)' },
+  //   leave: { opacity: 0, transform: 'translate3d(0,-40px,0)' },
+  //   config: config.wobbly,
+  // });
+
+  return transitions.map(({ item, key, props }) =>
+    item && (
+      <animated.div key={key} style={props} className="rounded-lg shadow-lg p-6 space-y-4">
+        <div className="flex items-center space-x-4">
           <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            src={item.icon}
+            alt="Company Logo"
+            className="w-12 h-12 bg-white p-2 rounded-full"
+            style={{ backgroundColor: item.iconBg }}
           />
+          <div>
+            <div className="font-bold text-xl">{item.title}</div>
+            <div className="text-sm">{item.company_name}</div>
+            <div className="text-sm">{item.date}</div>
+          </div>
         </div>
-      }
-    >
-      <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
-
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
+        <ul className="list-disc list-inside">
+          {item.points.map((point, index) => (
+            <li key={index} className="text-sm">
+              {point}
+            </li>
+          ))}
+        </ul>
+      </animated.div>
+    )
   );
 };
 
 const Experience = () => {
   return (
-    <>
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-      >
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h3 className={styles.sectionHeadText}>My Projects</h3>
-      </motion.div>
-
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="space-y-10 text-white max-w-4xl">
+        <h1 className="text-5xl font-bold">My Experiences</h1>
+        <div className="grid grid-cols-1 gap-6">
+          {experiences.map((item) => (
+            <ExperienceCard key={item.id} item={item} />
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
-     
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

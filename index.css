@@ -13,3 +13,12 @@
 .rainbow-cursor {
     cursor: url('https://www.cursors-4u.com/cursor/2006/11/12/rainbow.swf'), auto;
   }
+
+.bgStyle{
+
+    padding:8px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255,255,255,0.5);
+    pointer-events: none;
+  
+}
