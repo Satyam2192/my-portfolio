@@ -2,9 +2,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import {
   About,
-  Contact,
+  Message,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
@@ -21,19 +20,19 @@ const App = () => {
       scrollbar-hide 
       "
       >
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
         <About />
         <Tech />
-        {/* <Experience /> */}
+        <Experience />
         <Works />
 
         {/* <Feedbacks /> */}
         <div className="relative z-0">
-          <Contact />
+          <Message />
         </div>
       </div>
     </BrowserRouter>

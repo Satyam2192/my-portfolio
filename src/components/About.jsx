@@ -2,10 +2,62 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, slideIn } from "../utils/motion";
 import { Tilt } from "react-tilt";
-import { slideIn } from "../utils/motion";
 import Tech from "./Tech";
+
+const cardItems = [
+  {
+    icon: "https://svgshare.com/i/tA9.svg",
+    title: "Web Developer",
+    sub_title: "Experience the future with our cutting-edge designs.",
+    gradientColors: "from-purple-500 to-pink-500",
+  },
+  {
+    icon: "https://www.svgrepo.com/show/353515/browserstack.svg",
+    title: "Backend Developer",
+    sub_title: "Experience the future with our unique features.",
+    gradientColors: "from-blue-500 to-green-500",
+  },
+  {
+    icon: "https://www.svgrepo.com/show/439290/react.svg",
+    title: "React Developer",
+    sub_title: "Experience the future with our React Development.",
+    gradientColors: "from-yellow-500 to-red-500",
+  },
+];
+
+const Card = ({ icon, title, sub_title, gradientColors, cursorPos }) => {
+  return (
+    <motion.div
+      variants={fadeIn("", "", 0.2, 1)}
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4"
+    >
+      <Tilt
+        options={{
+          max: 25,
+          scale: 1.1,
+          speed: 500,
+          glare: true,
+          "max-glare": 0.5,
+        }}
+        className="w-full h-full"
+      >
+        <div
+          className={`w-full h-full bg-gradient-to-br ${gradientColors} rounded-2xl p-8 flex flex-col justify-center items-center`}
+          style={{
+            background: `radial-gradient(circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5))`,
+          }}
+        >
+          <i className="fas fa-rocket text-white text-4xl mb-4"></i>
+          <img src={icon} alt="logo" className="bg-none" />
+          <h3 className="text-white text-lg font-bold mb-2 mt-4">{title}</h3>
+          <p className="text-white text-sm text-center">{sub_title}</p>
+        </div>
+      </Tilt>
+    </motion.div>
+  );
+};
 
 const About = () => {
   const [cursorPos, setCursorPos] = useState({ x: 100, y: 100 });
@@ -19,6 +71,8 @@ const About = () => {
       document.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
+
+  
 
   return (
     <section className="h-100vh snap-center">
@@ -44,113 +98,16 @@ const About = () => {
       </div>
 
       <div className="m-4 mt-10 mb-10 justify-center sm:mt-20 flex flex-wrap gap-10">
-        <motion.div
-          variants={fadeIn("", "", 0.2, 1)}
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4"
-        >
-          <Tilt
-            options={{
-              max: 25,
-              scale: 1.1,
-              speed: 500,
-              glare: true,
-              "max-glare": 0.5,
-            }}
-            className="w-full h-full"
-          >
-            <div
-              className="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 flex flex-col justify-center items-center"
-              style={{
-                background: `radial-gradient(circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5))`,
-              }}
-            >
-              <i className="fas fa-rocket text-white text-4xl mb-4"></i>
-              <img
-                src="https://svgshare.com/i/tA9.svg"
-                alt="logo"
-                className="bg-none"
-              />
-              <h3 className="text-white text-lg font-bold mb-2 mt-4">
-                Web Developer
-              </h3>
-              <p className="text-white text-sm text-center">
-                Experience the future with our cutting-edge designs.
-              </p>
-            </div>
-          </Tilt>
-        </motion.div>
-
-        <motion.div
-          variants={fadeIn("", "", 0.2, 1)}
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4"
-        >
-          <Tilt
-            options={{
-              max: 25,
-              scale: 1.1,
-              speed: 500,
-              glare: true,
-              "max-glare": 0.5,
-            }}
-            className="w-full h-full"
-          >
-            <div
-              className="w-full h-full bg-gradient-to-br  from-blue-500 to-green-500 rounded-2xl p-8 flex flex-col justify-center items-center"
-              style={{
-                background: `radial-gradient(circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5))`,
-              }}
-            >
-              <i className="fas fa-rocket text-white text-4xl mb-4"></i>
-              <img
-                src="https://www.svgrepo.com/show/353515/browserstack.svg"
-                alt="logo"
-                className="bg-none"
-              />
-              <h3 className="text-white text-lg font-bold mb-2 mt-4">
-                Backend Developer
-              </h3>
-              <p className="text-white text-sm text-center">
-                Experience the future with our unique features.
-              </p>
-            </div>
-          </Tilt>
-        </motion.div>
-
-        <motion.div
-          variants={fadeIn("", "", 0.2, 1)}
-          className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4"
-        >
-          <Tilt
-            options={{
-              max: 25,
-              scale: 1.1,
-              speed: 500,
-              glare: true,
-              "max-glare": 0.5,
-            }}
-            className="w-full h-full"
-          >
-            <div
-              className="w-full h-full bg-gradient-to-br  from-yellow-500 to-red-500 rounded-2xl p-8 flex flex-col justify-center items-center"
-              style={{
-                background: `radial-gradient(circle at ${cursorPos.x}px ${cursorPos.y}px, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5))`,
-              }}
-            >
-              <i className="fas fa-rocket text-white text-4xl mb-4"></i>
-              <img
-                src="https://www.svgrepo.com/show/439290/react.svg"
-                alt="logo"
-                className="bg-none"
-              />
-              <h3 className="text-white text-lg font-bold mb-2 mt-4">
-                React Developer
-              </h3>
-              <p className="text-white text-sm text-center">
-                Experience the future with our React Development.
-              </p>
-            </div>
-          </Tilt>
-        </motion.div>
+        {cardItems.map((item, index) => (
+          <Card
+            key={index}
+            icon={item.icon}
+            title={item.title}
+            sub_title={item.sub_title}
+            gradientColors={item.gradientColors}
+            cursorPos={cursorPos}
+          />
+        ))}
       </div>
       <div
         className="cursor"
@@ -168,8 +125,6 @@ const About = () => {
           }}
         ></div>
       </div>
-    
-
     </section>
   );
 };

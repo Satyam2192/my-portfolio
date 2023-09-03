@@ -12,7 +12,7 @@ import StationCanvas from "./canvas/Station";
 // template_r8entax
 // service_rkkw474
 
-const Contact = () => {
+const Message = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -70,7 +70,7 @@ const Contact = () => {
           className="flex-[0.75] bg-gradient-to-r from-pink-500 to-purple-500 to-yellow-500 to-red-500 to-green-500 to-blue-500 opacity-50 transform rotate-90 p-8 rounded-2xl"
         >
           <p className={styles.sectionSubText}>Get in touch with me</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <h3 className={styles.sectionHeadText}>Message.</h3>
 
           <form
             // ref={formRef}
@@ -127,7 +127,7 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
-          <StationCanvas loading="lazy" />
+          {/* <StationCanvas loading="lazy" /> */}
         </motion.div>
       </div>
     </section>
@@ -136,4 +136,4 @@ const Contact = () => {
 
 // <StationCanvas />
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Message, "message");
