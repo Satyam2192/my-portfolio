@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-gradient-to-r from-green-500 to-blue-500 animate-glitch" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-20 bg-black opacity-80 ${
+        scrolled ? "animate-glitch" : "bg-transparent"
       } transition-all duration-500`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -43,7 +43,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Satyam <span className="sm:block hidden">Kumar</span>
           </p>
         </Link>
@@ -54,12 +54,18 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[18px] font-medium cursor-pointer mt-3`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`/#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <NavLink
+                className="text-xl font-semibold border-4 p-2 border-pink-500 hover:border-purple-500"
+                to="/contact"
+              >
+                Hire me
+              </NavLink>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -77,21 +83,28 @@ const Navbar = () => {
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
-                <li
+                <NavLink
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title ? "text-white" : "text-white"
                   } animate-slideIn`}
                   onClick={() => {
+                    useNavigate("/");
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
+                  <a href={`/#${nav.id}`}>{nav.title}</a>
+                </NavLink>
               ))}
+              <NavLink
+                className="text-xl font-semibold border-4 p-2 border-pink-500 hover:border-purple-500"
+                to="/contact"
+              >
+                Hire me
+              </NavLink>
             </ul>
-            <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-yellow-500 to-red-500 opacity-50 rounded-b-xl"></div>
+            {/* <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-yellow-500 to-red-500 opacity-50 rounded-b-xl"></div> */}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import showbooker from "./show-booker.png";
 import turulav from "./turulav.png";
 import earthsavers from "./earthsavers.png";
 import foodbooker from "./food-booking.png";
+import weather from "./weather.png";
 
 export {
   bg1,
@@ -16,4 +17,5 @@ export {
   turulav,
   earthsavers,
   foodbooker,
+  weather,
 };

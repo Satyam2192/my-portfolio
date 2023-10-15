@@ -19,7 +19,7 @@ const ProjectCard = ({
   cursorPos,
 }) => {
   return (
-    <motion.div
+    <div
       variants={fadeIn("", "", 0.2, 1)}
       className="w-full sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-[45%]"
     >
@@ -94,7 +94,7 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
@@ -114,19 +114,19 @@ const Works = () => {
   return (
     <section className="h-full snap-center"> 
       <div>
-        <motion.div
+        <div
           variants={slideIn("left", "tween", 0.1, 0.7)}
           className="flex-[0.75] bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-2xl shadow-su relative"
         >
           <div className="absolute top-0 left-0 w-full h-full rounded-2xl opacity-50"></div>
           <p className={styles.sectionSubText}>My Works</p>
           <h3 className={styles.sectionHeadText}>Projects.</h3>
-        </motion.div>
+        </div>
 
-        <motion.p
+        <p
           variants={fadeIn("", "", 0.1, 1)}
           className="m-4 sm:m-5 mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        ></motion.p>
+        ></p>
       </div>
 
       <div className="mt-20 flex flex-wrap justify-center gap-7">

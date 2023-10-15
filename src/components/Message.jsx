@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import StationCanvas from "./canvas/Station";
+import Footer from "./Footer";
 
 
 // p8_Ed82x5hx2FCGnf
@@ -59,6 +60,7 @@ const Message = () => {
   };
 
   return (
+    <>
     <section className="relative z-0 h-100vh snap-center">
   
       <div
@@ -131,6 +133,8 @@ const Message = () => {
         </motion.div>
       </div>
     </section>
+    
+    </>
   );
 };
 

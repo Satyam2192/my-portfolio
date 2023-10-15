@@ -16,9 +16,9 @@ const ExperienceItem = [
     icon: logo,
     iconBg: "#60A5FA",
     points: [
-      "Frontend Integration Success: Led 80% of Frontend development, optimizing data flow and boosting functionality.",
-      "Responsive UI Achievement: Developed responsive interfaces using React for Stolid, driving a 10% user surge. Collaborated on robust feature implementation with React, Node.js, and Express.js.",
-      "Glitch Resolution: Identified and resolved software issues, enhancing performance and user experience. Achieved 15% reduction in technical problems for smoother project delivery..",
+      "1. Frontend Integration Success: Led 80% of Frontend development, optimizing data flow and boosting functionality.",
+      "2. Responsive UI Achievement: Developed responsive interfaces using React for Stolid, driving a 10% user surge. Collaborated on robust feature implementation with React, Node.js, and Express.js.",
+      "3. Glitch Resolution: Identified and resolved software issues, enhancing performance and user experience. Achieved 15% reduction in technical problems for smoother project delivery..",
     ],
   },
 ];
@@ -63,12 +63,12 @@ const Card = ({
           </div>
           <h3 className="text-white text-xl font-bold mb-2 mt-4 ">{title}</h3>
           <ul
-            className="text-white text-xl mt-6"
+            className="text-white text-md mt-6"
             style={{ listStyle: "none", padding: 0 }}
           >
             {points.map((point, index) => (
               <li key={index} style={{ textAlign: "left", marginLeft: "20px" }}>
-                {"👉 " + point}
+                { point}
               </li>
             ))}
           </ul>

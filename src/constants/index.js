@@ -16,6 +16,7 @@ import {
   turulav,
   earthsavers,
   foodbooker,
+  weather,
 } from "../assets/components/index";
 
 export const navLinks = [
@@ -294,11 +295,11 @@ const projects = [
   {
     name: "Food Booking",
     description: [
-      "About: It is a food booking website that integrates with a recipe API",
+      "About: Turu Lav is a dating website equipped with a sophisticated matching algorithm and robust chatting capabilities.",
       "Features: ",
-      "1. It has a user-friendly UI interface that allows users to easily search recipes",
-      "2. Search your favorate recipes",
-      "3. Add or remove recipes from favorites list.",
+      "User Registration: Create a personalized profile with ease, getting started on your dating journey.",
+      "Matching Algorithm: Discover potential matches and browse profiles effortlessly with our advanced matching system.",
+      "Private Chatting: Engage in one-on-one conversations with other users, fostering connections and meaningful interactions.",
     ],
     tags: [
       {
@@ -319,6 +320,33 @@ const projects = [
       "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
     source_code_link2:
       "https://github.com/Satyam2192/wev-dev-2/tree/main/React_project/react-food-app",
+  },
+  {
+    name: "Weather App",
+    description: [
+      "About: This is a Weather Web App designed for obtaining Real time weather information for your city.",
+      "Features: ",
+      "1. Easy City Search: The weather website offers a simple city search option for quick access.",
+      "2. Comprehensive Real-Time Data: It displays essential real-time weather details such as cloud cover, temperature, feels-like temperature, pressure, humidity, and wind speed.",
+      "3. Accurate and Timely: The website ensures accurate and up-to-date information, making it reliable for planning activities and making informed decisions.",
+    ],
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Rest API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: weather,
+    source_code_link1: "https://sk-weather-today.netlify.app/",
+    source_code_link2: "https://github.com/Satyam2192/weather",
   },
 ];
 
