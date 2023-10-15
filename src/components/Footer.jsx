@@ -1,51 +1,46 @@
-import React, { useState, useEffect } from "react";
-import { whatsapp, linkedin, gmail, twitter } from "../assets/index";
-import { NavLink, useNavigate } from "react-router-dom";
+import React from "react";
+import { whatsapp, linkedin, gmail } from "../assets/index";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-  
   return (
-    <footer className="">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 mb-10">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <NavLink
-            className="text-xl font-semibold border-4 p-2 border-pink-500 hover:border-purple-500"
-            to="/contact"
-          >
-            Hire me
-          </NavLink>
+    <footer className="bg-gray-900 py-10 text-white ">
+      <div className="container mx-auto flex flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-between">
+        <NavLink
+          className="mb-8 text-2xl font-semibold p-2 border-4 border-pink-500 hover:border-purple-500 md:mb-4 sm:mb-0"
+          to="/contact"
+        >
+          Hire me
+        </NavLink>
 
-          <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <button
-              onClick={() =>
-                window.open("https://wa.me/+919491926980", "_blank")
-              }
-              className="hover:text-gray-900 dark:hover:text-white"
-            >
-              <img src={whatsapp} alt="WhatsApp" className="w-7" />
-            </button>
-            <div
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/satyam-kumar-124338231/",
-                  "_blank"
-                )
-              }
-              className="hover:text-gray-900 dark:hover:text-white"
-            >
-              <img src={linkedin} alt="LinkedIn" className="w-7 bg-[#0077b5]" />
-              <span className="sr-only">LinkedIn page</span>
-            </div>
-            <div
-              onClick={() =>
-                window.open("mailto:satyam21092@gmail.com", "_blank")
-              }
-              className="hover:text-gray-900 dark:hover:text-white"
-            >
-              <img src={gmail} alt="Gmail" className="w-9" />
-              <span className="sr-only">Gmail</span>
-            </div>
-            <div
+        <div className="flex space-x-5">
+          <a
+            href="https://wa.me/+919491926980"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-900 dark:hover:text-white"
+          >
+            <img src={whatsapp} alt="WhatsApp" className="w-7" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/satyam-kumar-124338231/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-900 dark:hover:text-white"
+          >
+            <img src={linkedin} alt="LinkedIn" className="w-7 bg-[#0077b5]" />
+            <span className="sr-only">LinkedIn page</span>
+          </a>
+          <a
+            href="mailto:satyam21092@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-900 dark:hover:text-white"
+          >
+            <img src={gmail} alt="Gmail" className="w-9" />
+            <span className="sr-only">Gmail</span>
+          </a>
+          <div
               onClick={() =>
                 window.open("https://discord.com/users/satyam4329", "_blank")
               }
@@ -108,8 +103,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">GitHub account</span>
             </div>
-          </div>
-        </div>
+            </div>
       </div>
     </footer>
   );
