@@ -11,6 +11,7 @@ import {
   threejs,
 } from "../assets";
 import {
+  tenderbig,
   taskmanager,
   showbooker,
   turulav,

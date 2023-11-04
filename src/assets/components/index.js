@@ -7,11 +7,13 @@ import turulav from "./turulav.png";
 import earthsavers from "./earthsavers.png";
 import foodbooker from "./food-booking.png";
 import weather from "./weather.png";
+import tenderbig  from "./tenderbig.png";
 
 export {
   bg1,
   bg12,
   bg3,
+  tenderbig,
   taskmanager,
   showbooker,
   turulav,
