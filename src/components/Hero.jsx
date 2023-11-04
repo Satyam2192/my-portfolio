@@ -45,7 +45,7 @@ const Hero = () => {
       : bg12;
 
   const backgroundImage3 =
-    window.innerWidth > 768 ? bg3 : bg3;
+    window.innerWidth > 768 ? bg3 : bg1;
   return (
     <section
       className={`h-[100vh] snap-center relative w-full mx-auto bg-cover bg-no-repeat bg-center App overflow-hidden`}

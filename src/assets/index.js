@@ -14,6 +14,7 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import showbooker from "./components/show-booker.png";
+import tenderbig from "./components/tenderbig.png"
 
 import whatsapp from "./whatsapp.svg";
 import linkedin from "./linkedin.svg";
@@ -21,7 +22,9 @@ import gmail from "./gmail.svg";
 import twitter from "./twitter.svg"
 
 import meeting from "./meeting.jpg"
+
 export {
+  tenderbig,
   meeting,
   whatsapp,
   linkedin,

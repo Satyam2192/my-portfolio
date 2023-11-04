@@ -167,6 +167,44 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Tender Big",
+    description: [
+      "About: It is Tender Listing Web App, where you can get your tender listed, buy and many more",
+      "Features: (Work in Progress)",
+      "1. You can add you tender, edit and delete your tender by purchasing membership.",
+      "2. You can bid any tender and list any project on the website ",
+      "3. Admin Login, client login, contractor login and sub contractor login",
+      "4. Progressive search filter, advance search and many more ",
+    ],
+    tags: [
+      {
+        name: "react.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "blue-text-gradient",
+      },
+      
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      
+    ],
+    image: tenderbig,
+    source_code_link1: "https://tenderbig.com",
+    source_code_link2: "https://github.com/Satyam2192/",
+  },
+  {
     name: "Real Time Task Manager",
     description: [
       "About: It is Task Manager Web App, where you can get your tasks done with the help of your comutility",
@@ -178,7 +216,7 @@ const projects = [
     ],
     tags: [
       {
-        name: "react",
+        name: "react.js",
         color: "blue-text-gradient",
       },
       {
@@ -194,7 +232,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "express js",
+        name: "express.js",
         color: "blue-text-gradient",
       },
     ],
@@ -213,7 +251,7 @@ const projects = [
     ],
     tags: [
       {
-        name: "react",
+        name: "react.js",
         color: "blue-text-gradient",
       },
       {
@@ -229,7 +267,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "express js",
+        name: "express.js",
         color: "blue-text-gradient",
       },
     ],
