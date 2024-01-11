@@ -9,6 +9,7 @@ import {
   mongodb,
   git,
   threejs,
+
 } from "../assets";
 import {
   tenderbig,
@@ -18,6 +19,7 @@ import {
   earthsavers,
   foodbooker,
   weather,
+  recipeapi,
 } from "../assets/components/index";
 
 export const navLinks = [
@@ -77,7 +79,7 @@ const technologies = [
   },
   // {
   //   name: "Express js",
-  //   icon: redux,
+  //   icon: express,
   // },
   {
     name: "Tailwind CSS",
@@ -120,10 +122,10 @@ const Certificates = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
- 
+
 ];
 
-const experiences=[
+const experiences = [
   {
     title: "Code Jam ",
 
@@ -170,12 +172,12 @@ const projects = [
   {
     name: "Tender Big",
     description: [
-      "About: It is Tender Listing Web App, where you can get your tender listed, buy and many more",
-      "Features: (Work in Progress)",
-      "1. You can add you tender, edit and delete your tender by purchasing membership.",
-      "2. You can bid any tender and list any project on the website ",
-      "3. Admin Login, client login, contractor login and sub contractor login",
-      "4. Progressive search filter, advance search and many more ",
+      "Overview: A Tender Listing Web App designed for listing, buying, and more.",
+      "Features: (Under Development)",
+      "1. Add, edit, and delete your tenders with the purchase of a membership.",
+      "2. Bid on any tender and list projects on the website.",
+      "3. Multi-role access with logins for admin, clients, contractors, and subcontractors.",
+      "4. Progressive search filters, advanced search, and additional functionalities."
     ],
     tags: [
       {
@@ -194,16 +196,54 @@ const projects = [
         name: "express.js",
         color: "blue-text-gradient",
       },
-      
+
       {
         name: "mongodb",
         color: "green-text-gradient",
       },
-      
+
     ],
     image: tenderbig,
     source_code_link1: "https://tenderbig.com",
     source_code_link2: "https://github.com/Satyam2192/",
+  },
+  {
+    name: "Recipe API",
+    description: [
+      "About: About: This API provides functionalities to manage recipes in a database. It is designed to be used by administrators with the necessary privileges to perform CRUD operations on recipes.",
+      "Features: ",
+      "1. Retrieve all recipes and access recipes by ID without authentication",
+      "2. Admin-exclusive rights for creating, updating, and deleting recipes",
+      "3. Search for recipes based on a query",
+      "4. Role-based access for both administrators and visitors",
+    ],
+    tags: [
+      {
+        name: "node.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "jsonwebtoken",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bcrypt",
+        color: "blue-text-gradient",
+      },
+
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+
+    ],
+    image: recipeapi,
+    source_code_link1: "https://recipes-api-w6l4.onrender.com/api/v1/recipes",
+    source_code_link2: "https://github.com/Satyam2192/recipes-API",
   },
   {
     name: "Real Time Task Manager",
@@ -244,11 +284,11 @@ const projects = [
   {
     name: "ShowBooker",
     description: [
-      "About: It is an online TV show booking website",
-      "Features: (Work in Progress)",
-      "1. Search various shows and like website",
-      "2. Get all shows listed and descriptions of shows with trailers",
-      "3. Book your favorite show",
+      "Overview: An online platform dedicated to booking TV show experiences.",
+      "Features:",
+      "1. Explore a diverse range of shows and engage with the website through likes.",
+      "2. Access comprehensive listings of all shows, complete with detailed descriptions and trailers.",
+      "3. Seamlessly book tickets for your favorite shows."
     ],
     tags: [
       {
@@ -279,11 +319,11 @@ const projects = [
   {
     name: "Turu Lav",
     description: [
-      "About: It is a dating website with a matching algorithm and chatting features",
-      "Features: (Work in Progress)",
-      "1. Registration functionality with the making of the profile section.",
-      "2. Features of matching algorithm and search profile.",
-      "3. 1-1 chatting feature for users",
+      "Overview: A dating platform equipped with a sophisticated matching algorithm and interactive chat features.",
+      "Features: (Under Development)",
+      "1. Streamlined registration process, including the creation of user profiles.",
+      "2. Advanced matching algorithm and profile search capabilities.",
+      "3. User-friendly 1-1 chatting feature for seamless communication."
     ],
     tags: [
       {
@@ -307,11 +347,12 @@ const projects = [
   {
     name: "Earth Savers",
     description: [
-      "About: It provides users with information about their carbon footprints.",
+
+      "Overview: A platform designed to enlighten users about their carbon footprints and environmental impact.",
       "Features:",
-      "1. Realtime carbon footprint data.",
-      "2. Registration functionality and contact option.",
-      "3. Scroll-up functionality with responsive UI designs.",
+      "1. Real-time tracking of carbon footprint data.",
+      "2. User-friendly registration process and contact options.",
+      "3. Smooth scroll-up functionality paired with responsive UI designs."
     ],
     tags: [
       {
@@ -334,11 +375,12 @@ const projects = [
   {
     name: "Food Booking",
     description: [
-      "About: Turu Lav is a dating website equipped with a sophisticated matching algorithm and robust chatting capabilities.",
+      "Overview: A Frontend Food Booking App, facilitating seamless ordering and dining experiences.",
       "Features: ",
-      "User Registration: Create a personalized profile with ease, getting started on your dating journey.",
-      "Matching Algorithm: Discover potential matches and browse profiles effortlessly with our advanced matching system.",
-      "Private Chatting: Engage in one-on-one conversations with other users, fostering connections and meaningful interactions.",
+      "1. Effortlessly place, modify, and cancel food orders through user-friendly interfaces.",
+      "2. Browse and book tables, pre-order meals, and enjoy a streamlined dining process.",
+      "3. Diverse user logins for customers, restaurant owners, and delivery personnel.",
+      "4. Incorporating progressive search filters, advanced search options, and other enhanced features."
     ],
     tags: [
       {
@@ -363,11 +405,11 @@ const projects = [
   {
     name: "Weather App",
     description: [
-      "About: This is a Weather Web App designed for obtaining Real time weather information for your city.",
-      "Features: ",
-      "1. Easy City Search: The weather website offers a simple city search option for quick access.",
-      "2. Comprehensive Real-Time Data: It displays essential real-time weather details such as cloud cover, temperature, feels-like temperature, pressure, humidity, and wind speed.",
-      "3. Accurate and Timely: The website ensures accurate and up-to-date information, making it reliable for planning activities and making informed decisions.",
+      "Overview: Introducing a Weather Web App dedicated to providing real-time weather updates for your city.",
+"Features:",
+"1. Effortless City Search: The weather website simplifies the search process, ensuring quick access to information.",
+"2. Detailed Real-Time Data: Access comprehensive real-time weather information, including cloud cover, temperature, feels-like temperature, pressure, humidity, and wind speed.",
+"3. Precision and Timeliness: The website guarantees accurate and up-to-date weather details, offering reliability for activity planning and well-informed decision-making."
     ],
     tags: [
       {
