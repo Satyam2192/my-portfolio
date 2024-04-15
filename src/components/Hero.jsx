@@ -4,7 +4,6 @@ import { useSpring, animated } from "react-spring";
 import { bg1, bg12, bg3 } from "../assets/components/index";
 import { styles } from "../styles";
 import AnimatedCursor from "react-animated-cursor";
-import { StarsCanvas } from "./canvas";
 
 const Cursor = () => {
   return (
@@ -53,62 +52,7 @@ const Hero = () => {
     
       <Cursor />
       
-      <Plx
-        parallaxData={[
-          {
-            start: 0,
-            end: 900,
-            properties: [
-              {
-                startValue: 1,
-                endValue: 1.18,
-                property: "scale",
-              },
-            ],
-          },
-        ]}
-        style={{
-          position: "fixed",
-          left: 0,
-          top: 0,
-          width: "100%",
-        }}
-      >
-        {/* <img
-          src={`${backgroundImage}`}
-          alt="background"
-          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center flex overflow-hidden`}
-        /> */}
-      </Plx>
-      <Plx
-        parallaxData={[
-          {
-            start: 0,
-            end: 400,
-            easing: "ease-in",
-            properties: [
-              {
-                startValue: 1,
-                endValue: 3.9,
-                property: "scale",
-              },
-            ],
-          },
-        ]}
-        style={{
-          position: "static",
-          left: 0,
-          top: 0,
-          width: "100%",
-          zIndex: 100,
-        }}
-      >
-        <img
-          src={`${backgroundImage3}`}
-          alt="foreground"
-          className={`relative w-full h-screen mx-auto bg-cover bg-no-repeat bg-center overflow-hidden`}
-        />
-      </Plx>
+   
 
       <Plx
         parallaxData={[

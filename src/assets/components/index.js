@@ -8,7 +8,8 @@ import earthsavers from "./earthsavers.png";
 import foodbooker from "./food-booking.png";
 import weather from "./weather.png";
 import tenderbig  from "./tenderbig.png";
-import recipeapi from "./recipes_API.png"
+import recipeapi from "./recipes_API.png";
+import skhomes from "./skhomes.jpg";
 export {
   bg1,
   bg12,
@@ -21,4 +22,5 @@ export {
   foodbooker,
   weather,
   recipeapi,
+  skhomes
 };

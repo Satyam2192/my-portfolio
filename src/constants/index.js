@@ -168,6 +168,45 @@ const testimonials = [
   },
 ];
 
+
+// {
+//   name: "",
+//   description: [
+//     "Overview: A",
+//     "Features: ",
+//     "1. ",
+//     "2. ",
+//     "3. ",
+//     "4. "
+//   ],
+//   tags: [
+//     {
+//       name: "react.js",
+//       color: "blue-text-gradient",
+//     },
+//     {
+//       name: "node.js",
+//       color: "green-text-gradient",
+//     },
+//     {
+//       name: "express.js",
+//       color: "blue-text-gradient",
+//     },
+// {
+//       name: "mongodb",
+//       color: "green-text-gradient",
+//     },
+// {
+//       name: "AWS",
+//       color: "pink-text-gradient",
+//     },
+
+//   ],
+//   image: skhome,
+//   source_code_link1: "",
+//   source_code_link2: "", 
+
+import { skhomes } from "../assets/components/index";
 const projects = [
   {
     name: "Tender Big",
@@ -207,6 +246,45 @@ const projects = [
     source_code_link1: "https://tenderbig.com",
     source_code_link2: "https://github.com/Satyam2192/",
   },
+  {
+    name: "SK Homes Rental & Sale Platform",
+    description: [
+      "Overview: A real estate platform for renting and selling houses.",
+      "Features:",
+      "1. User authentication using JWT tokens for secure access.",
+      "2. Listings for houses for rent and sale, including recent offers and properties.",
+      "3. Search functionality with filters for property type (rent/sale), city, price range, and amenities (parking, furnished).",
+      "4. Sorting options by price (low-to-high, high-to-low), date (latest-to-oldest, oldest-to-latest).",
+      "5. Landlord portal for adding properties with address (including auto location tracking), details, and site images.",
+      "6. Dashboard for managing properties (update, delete listings), and user profile.",
+    ],
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AWS ",
+        color: "pink-text-gradient", 
+      },
+    ],
+    image: skhomes, 
+    source_code_link1: "http://13.49.67.115/",
+    source_code_link2: "https://github.com/Satyam2192/Sk-Homes",
+  },
+  
   {
     name: "Recipe API",
     description: [

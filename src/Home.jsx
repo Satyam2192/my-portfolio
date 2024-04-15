@@ -8,7 +8,6 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
 import Footer from "./components/Footer";
 

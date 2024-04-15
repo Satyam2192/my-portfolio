@@ -138,6 +138,5 @@ const Message = () => {
   );
 };
 
-// <StationCanvas />
 
 export default SectionWrapper(Message, "message");
