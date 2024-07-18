@@ -15,6 +15,7 @@ const ExperienceItem = [
     company_name: "Smollan Groups",
     icon: com2,
     iconBg: "#60A5FA",
+    certificate_code_link1: "#",
     points: [
       "1. Engineered a reports page with multiple reports functionality on a single page.",
       "2. Revamped the filter feature on the sanctions page, resulting in about 40% reduction in the user’s time to get the desired result (analytically). (Tech Stack: SvelteKit, TypeScript, Tailwind CSS)",
@@ -28,13 +29,14 @@ const ExperienceItem = [
     company_name: "Stoild Pvt Ltd",
     icon: logo,
     iconBg: "#60A5FA",
+    certificate_code_link1: "https://drive.google.com/file/d/1Foo4GBkoxiNiXnA88c4Wdc-1AhXU3RMn/view?usp=sharing",
     points: [
       "1. Frontend Integration Success: Led 80% of Frontend development, optimizing data flow and boosting functionality.",
       "2. Responsive UI Achievement: Developed responsive interfaces using React for Stolid, driving a 10% user surge. Collaborated on robust feature implementation with React, Node.js, and Express.js.",
       "3. Glitch Resolution: Identified and resolved software issues, enhancing performance and user experience. Achieved 15% reduction in technical problems for smoother project delivery..",
     ],
   },
-  
+
 ];
 
 const Card = ({
@@ -45,6 +47,7 @@ const Card = ({
   points,
   iconBg,
   cursorPos,
+  certificate_code_link1,
 }) => {
   return (
     <motion.div
@@ -82,10 +85,22 @@ const Card = ({
           >
             {points.map((point, index) => (
               <li key={index} style={{ textAlign: "left", marginLeft: "20px" }}>
-                { point}
+                {point}
               </li>
             ))}
           </ul>
+        </div>
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div
+            onClick={() => window.open(certificate_code_link1, "_blank")}
+            className="bg-gradient-to-r from-pink-500 to-purple-500 to-blue-500 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2"
+          >
+            <img
+              src={"https://www.svgrepo.com/show/143957/link.svg"}
+              alt="source code"
+              className="w-1/2 h-1/2 object-contain"
+            />
+          </div>
         </div>
       </Tilt>
     </motion.div>
@@ -133,6 +148,7 @@ const Experience = () => {
             points={item.points}
             iconBg={item.iconBg}
             cursorPos={cursorPos}
+            certificate_code_link1={item.certificate_code_link1} 
           />
         ))}
       </div>
@@ -146,9 +162,8 @@ const Experience = () => {
         <div
           className="cursor__inner"
           style={{
-            transform: `translate(-50%, -50%) translate(${
-              cursorPos.x - 10
-            }px, ${cursorPos.y - 10}px)`,
+            transform: `translate(-50%, -50%) translate(${cursorPos.x - 10
+              }px, ${cursorPos.y - 10}px)`,
           }}
         ></div>
       </div>
