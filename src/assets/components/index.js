@@ -22,5 +22,5 @@ export {
   foodbooker,
   weather,
   recipeapi,
-  skhomes
+  skhomes,
 };

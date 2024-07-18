@@ -5,11 +5,24 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, slideIn } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import logo from "../assets/components/1clogo.png";
+import com2 from "../assets/components/2clogo.jpg";
 
-// Define the ExperienceItem array here
 const ExperienceItem = [
   {
     id: 1,
+    date: "May 2024 - July 2024",
+    title: "Frontend Developer Intern",
+    company_name: "Smollan Groups",
+    icon: com2,
+    iconBg: "#60A5FA",
+    points: [
+      "1. Engineered a reports page with multiple reports functionality on a single page.",
+      "2. Revamped the filter feature on the sanctions page, resulting in about 40% reduction in the user’s time to get the desired result (analytically). (Tech Stack: SvelteKit, TypeScript, Tailwind CSS)",
+      "3. Resolved over 15+ issues and contributed to building over 5+ features during the internship. Actively participated in code reviews and testing processes to maintain high-quality code."
+    ],
+  },
+  {
+    id: 2,
     date: "Jun 2023 - July 2023",
     title: "SDE Intern (Full-time)",
     company_name: "Stoild Pvt Ltd",
@@ -21,6 +34,7 @@ const ExperienceItem = [
       "3. Glitch Resolution: Identified and resolved software issues, enhancing performance and user experience. Achieved 15% reduction in technical problems for smoother project delivery..",
     ],
   },
+  
 ];
 
 const Card = ({
@@ -143,6 +157,3 @@ const Experience = () => {
 };
 
 export default SectionWrapper(Experience, "experience");
-
-
-
