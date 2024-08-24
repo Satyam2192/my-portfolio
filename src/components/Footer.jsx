@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-10 text-white ">
-      <div className="container mx-auto flex max-w-8xl md:max-w-7`xl flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-between">
+    <div className="bg-gray-900 py-10 text-white ">
+      <div className="container mx-auto flex max-w-7xl md:max-w-7xl flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-between">
         <NavLink
           className="mb-8 text-2xl font-semibold p-2 border-4 border-pink-500 hover:border-purple-500 md:mb-4 sm:mb-0"
           to="/contact"
@@ -105,7 +105,7 @@ const Footer = () => {
             </div>
             </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
